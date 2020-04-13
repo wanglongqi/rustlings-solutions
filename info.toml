@@ -52,7 +52,8 @@ because we want to assign a different typed value to an existing variable. Somet
 you may also like to reuse existing variable names because you are just converting
 values to different types like in this exercise.
 Fortunately Rust has a powerful solution to this problem: 'Shadowing'!
-You can read more about 'Shadowing' in the book's section 'Variables and Mutability'.
+You can read more about 'Shadowing' in the book's section 'Variables and Mutability': 
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
 Try to solve this exercise afterwards using this technique."""
 
 # IF
@@ -508,17 +509,6 @@ function. Read more about that in the `std::result` module docs:
 https://doc.rust-lang.org/std/result/#results-must-be-used"""
 
 # OPTIONS / RESULTS
-
-[[exercises]]
-name = "option1"
-path = "exercises/error_handling/option1.rs"
-mode = "test"
-hint = """
-Try using a `match` statement where the arms are `Some(thing)` and `None`.
-Or set a default value to print out if you get `None` by using the
-function `unwrap_or`.
-Or use an `if let` statement on the result of `pop()` to both destructure
-a `Some` value and only print out something if we have a value!"""
 
 [[exercises]]
 name = "option1"
