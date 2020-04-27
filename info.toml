@@ -56,6 +56,21 @@ You can read more about 'Shadowing' in the book's section 'Variables and Mutabil
 https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
 Try to solve this exercise afterwards using this technique."""
 
+[[exercises]]
+name = "variables6"
+path = "exercises/variables/variables6.rs"
+mode = "compile"
+hint = """
+We know about variables and mutability, but there is another important type of 
+variable available; constants. 
+Constants are always immutable and they are declared with keyword 'const' rather 
+then keyword 'let'.
+Constants types must also always be annotated.
+
+Read more about constants under 'Differences Between Variables and Constants' in the book's section 'Variables and Mutability': 
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
+"""
+
 # IF
 
 [[exercises]]
@@ -200,13 +215,22 @@ Now you have another tool in your toolbox!"""
 name = "structs1"
 path = "exercises/structs/structs1.rs"
 mode = "test"
-hint = "No hints this time ;)"
+hint = """
+Rust has more than one type of struct. Both variants are used to package related data together.
+On the one hand, there are normal, or classic, structs. These are named collections of related data stored in fields.
+The other variant is tuple structs. Basically just named tuples.
+In this exercise you need to implement one of each kind.
+
+Read more about structs in The Book: https://doc.rust-lang.org/stable/book/ch05-00-structs.html"""
 
 [[exercises]]
 name = "structs2"
 path = "exercises/structs/structs2.rs"
 mode = "test"
-hint = "No hints this time ;)"
+hint = """
+Creating instances of structs is easy, all you need to do is assign some values to its fields. 
+There is however some shortcuts that can be taken when instantiating structs. 
+Have a look in The Book, to find out more: https://doc.rust-lang.org/stable/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"""
 
 # STRINGS
 
@@ -477,7 +501,7 @@ mode = "test"
 hint = """
 First hint: To figure out what type should go where the ??? is, take a look
 at the test helper function `test_with_str`, since it returns whatever
-`read_and_validate` returns and`test_with_str` has its signature fully
+`read_and_validate` returns and `test_with_str` has its signature fully
 specified.
 
 
