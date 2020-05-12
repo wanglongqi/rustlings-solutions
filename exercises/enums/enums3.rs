@@ -1,24 +1,23 @@
 // enums3.rs
 // Address all the TODOs to make the tests pass!
 
-
 enum Message {
     // TODO: implement the message variant types based on their usage below
-    ChangeColor(u8,u8,u8),
+    ChangeColor(u8, u8, u8),
     Quit,
     Echo(String),
-    Move{x:u8,y:u8}
+    Move { x: u8, y: u8 },
 }
 
 struct Point {
     x: u8,
-    y: u8
+    y: u8,
 }
 
 struct State {
     color: (u8, u8, u8),
     position: Point,
-    quit: bool
+    quit: bool,
 }
 
 impl State {
@@ -40,12 +39,12 @@ impl State {
 
     fn process(&mut self, message: Message) {
         // TODO: create a match expression to process the different message variants
-       match message {
-           Message::ChangeColor(x,y,z)=>self.change_color((x,y,z)),
-           Message::Echo(x) => self.echo(x),
-           Message::Move{x:x,y:y}=> self.move_position(Point{x:x,y:y}),
-           Message::Quit=> self.quit()
-       }
+        match message {
+            Message::ChangeColor(x, y, z) => self.change_color((x, y, z)),
+            Message::Echo(x) => self.echo(x),
+            Message::Move { x: x, y: y } => self.move_position(Point { x: x, y: y }),
+            Message::Quit => self.quit(),
+        }
     }
 }
 
@@ -55,14 +54,14 @@ mod tests {
 
     #[test]
     fn test_match_message_call() {
-        let mut state = State{
+        let mut state = State {
             quit: false,
-            position: Point{ x: 0, y: 0 },
-            color: (0, 0, 0)
+            position: Point { x: 0, y: 0 },
+            color: (0, 0, 0),
         };
         state.process(Message::ChangeColor(255, 0, 255));
         state.process(Message::Echo(String::from("hello world")));
-        state.process(Message::Move{ x: 10, y: 15 });
+        state.process(Message::Move { x: 10, y: 15 });
         state.process(Message::Quit);
 
         assert_eq!(state.color, (255, 0, 255));
@@ -70,5 +69,4 @@ mod tests {
         assert_eq!(state.position.y, 15);
         assert_eq!(state.quit, true);
     }
-
 }

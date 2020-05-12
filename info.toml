@@ -87,6 +87,15 @@ Remember in Rust that:
 - `if`/`else` conditionals are expressions
 - Each condition is followed by a `{}` block."""
 
+[[exercises]]
+name = "if2"
+path = "exercises/if/if2.rs"
+mode = "test"
+hint = """
+For that first compiler error, it's important in Rust that each conditional
+block return the same type! To get the tests passing, you will need a couple
+conditions checking different input values."""
+
 # FUNCTIONS
 
 [[exercises]]
@@ -231,6 +240,19 @@ hint = """
 Creating instances of structs is easy, all you need to do is assign some values to its fields. 
 There is however some shortcuts that can be taken when instantiating structs. 
 Have a look in The Book, to find out more: https://doc.rust-lang.org/stable/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"""
+
+[[exercises]]
+name = "structs3"
+path = "exercises/structs/structs3.rs"
+mode = "test"
+hint = """
+The new method needs to panic if the weight is physically impossible :), how do we do that in Rust?
+
+For is_international: What makes a package international? Seems related to the places it goes through right?
+
+For calculate_transport_fees: Bigger is more expensive usually, we don't have size, but something may fit the bill here :)
+
+Have a look in The Book, to find out more about method implementations: https://doc.rust-lang.org/book/ch05-03-method-syntax.html"""
 
 # STRINGS
 
@@ -539,13 +561,15 @@ name = "option1"
 path = "exercises/option/option1.rs"
 mode = "compile"
 hint = """
-Check out some functions of Option:
+Hint 1: Check out some functions of Option:
 is_some
 is_none
 unwrap
 
 and:
 pattern matching
+
+Hint 2: There are no sensible defaults for the value of an Array; the values need to be filled before use.
 """
 
 [[exercises]]
@@ -640,10 +664,10 @@ name = "iterators4"
 path = "exercises/standard_library_types/iterators4.rs"
 mode = "test"
 hint = """
-In an imperative language you might write a for loop to iterate through
-multiply the values into a mutable variable. Or you might write code more
-functionally with recursion and a match clause. But you can also use ranges
-and iterators to solve this in rust."""
+In an imperative language, you might write a for loop that updates 
+a mutable variable. Or, you might write code utilizing recursion 
+and a match clause. In Rust you can take another functional
+approach, computing the factorial elegantly with ranges and iterators."""
 
 # TRAITS
 

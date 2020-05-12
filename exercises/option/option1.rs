@@ -17,6 +17,6 @@ fn main() {
             ((iter as u16 * 5) + 2) / (4 * 16)
         };
 
-        numbers[iter] = Some(number_to_add);
+        numbers[iter as usize] = Some(number_to_add);
     }
 }
