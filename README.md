@@ -34,7 +34,7 @@ This will install Rustlings and give you access to the `rustlings` command. Run 
 
 ## Windows
 
-First, set `ExecutionPolicy` to `RemoteSigned`:
+In PowerShell, set `ExecutionPolicy` to `RemoteSigned`:
 
 ```ps
 Set-ExecutionPolicy RemoteSigned
@@ -43,7 +43,7 @@ Set-ExecutionPolicy RemoteSigned
 Then, you can run:
 
 ```ps
-Invoke-WebRequest https://git.io/rustlings-win | Select-Object -ExpandProperty Content | Out-File $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1
+Start-BitsTransfer -Source https://git.io/rustlings-win -Destination $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1
 ```
 
 To install Rustlings. Same as on MacOS/Linux, you will have access to the `rustlings` command after it.
@@ -99,7 +99,7 @@ rustlings hint myExercise1
 
 ## Testing yourself
 
-After every couple of sections, there will be a test that'll test your knowledge on a bunch of sections at once. These tests are found in `exercises/testN.rs`.
+After every couple of sections, there will be a quiz that'll test your knowledge on a bunch of sections at once. These quizzes are found in `exercises/quizN.rs`.
 
 ## Completion
 
